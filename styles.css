@@ -1,0 +1,90 @@
+:root {
+    --terroso-black: #333333;
+    --terroso-brown: #beab72;
+    --terroso-white: #f9f9f4;
+    --terroso-red: #de2229;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    display: grid;
+    /*grid-template-rows: 2;*/
+    gap: 10px;
+    background-color: var(--terroso-black);
+    padding: 10px;
+    border-radius: 10px;
+    width: 240px;
+}
+
+.screen {
+    display: flex;
+    height: 48px;
+    width: 100%;
+    background-color: blanchedalmond;
+    color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    justify-content: end;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    background-color: var(--terroso-white);
+    border-radius: 3px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    outline: var(--terroso-red) solid 3px;
+    transform: scale(90%);
+}
+
+.buttons {
+    display: grid;
+    width: 100%;
+    gap: 5px;
+
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "left-bracket right-bracket clear - -"
+    "d7 d8 d9 sum cociente"
+    "d4 d5 d6 sum product"
+    "d1 d2 d3 substract all-clear"
+    "d0 d0 dot-dec equal equal";
+}
+
+.left-bracket {
+    grid-area: left-bracket;
+}
+
+.right-bracket {
+    grid-area: right-bracket;
+}
+
+.clear      { grid-area: clear; }
+.d9         { grid-area: d9; }
+.d8         { grid-area: d8; }
+.d7         { grid-area: d7; }
+.d6         { grid-area: d6; }
+.d5         { grid-area: d5; }
+.d4         { grid-area: d4; }
+.d3         { grid-area: d3; }
+.d2         { grid-area: d2; }
+.d1         { grid-area: d1; }
+.d0         { grid-area: d0; }
+.sum        { grid-area: sum;}
+.product    { grid-area: product;}
+.cociente   { grid-area: cociente;}
+.substract  { grid-area: substract;}
+.dot-dec    { grid-area: dot-dec;}
+.equal      { grid-area: equal;}
+.all-clear  { grid-area: all-clear;}
