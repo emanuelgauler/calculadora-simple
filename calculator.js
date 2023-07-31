@@ -17,9 +17,7 @@ for (const button of buttons) {
         }, false);
     } else if( button.dataset.value === "C" ) {
         button.addEventListener( 'click', function(e) {
-            let letters = pantalla.innerHTML.split("");
-            letters.pop();
-            pantalla.innerHTML = letters.join("");
+            pantalla.innerHTML = pantalla.innerHTML.slice(0, -1);
         }, false);
     } else {
         button.addEventListener('click', function (e) {
